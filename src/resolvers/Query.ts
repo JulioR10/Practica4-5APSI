@@ -92,7 +92,7 @@ export const Recipe = {
   ) => {
     let arrayObjIngrediente = [];
     if (parent.ingredients.length == 1) {
-      arrayObjIngrediente = parent.ingredients[0].map(
+      arrayObjIngrediente = parent.ingredients.map(
         async (ingrediente: string) => {
           const ObjIngrediente = await clientDB
             .collection("Ingredients")
